@@ -6,7 +6,7 @@ on:  # when will it trigger
   workflow_dispatch:
 jobs:  # works to be done
   build_and_test: # Pipeline to be complete
-    runs-on: ubunto-20.04 # server to be run on
+    runs-on: ubuntu-20.04 # server to be run on
     steps:
       - name: Clone Code
         uses: actions/checkout@v2
