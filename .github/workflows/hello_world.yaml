@@ -5,14 +5,14 @@ name: Hello Universe
     - main # On Main branch it will trigger
     workflow_dispatch:
     jobs:  # works to be done
-    build_and_test: # Pipeline to be complete
-    runs-on: ubunto-20.04 # server to be run on
-    steps:
-      - name: Clone Code
-        uses: actions/checkout@v2
-      - name: Compile Java Filegit add --
-        shell: bash
-        run: javac Man.java
-      - name: Run The Java File
-       shell: bash
-        run: java Main
+      build_and_test: # Pipeline to be complete
+        runs-on: ubunto-20.04 # server to be run on
+        steps:
+          - name: Clone Code
+            uses: actions/checkout@v2
+          - name: Compile Java File
+            shell: bash
+            run: javac Man.java
+          - name: Run The Java File
+            shell: bash
+            run: java Main
